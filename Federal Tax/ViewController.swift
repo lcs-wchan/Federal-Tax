@@ -9,19 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+     @IBOutlet weak var pleaseEnterYourName: UITextField!
+    @IBAction func pleaseEnterYourGrossIncome(_ sender: Any){
+    //MARK: propertites
+    let name = pleaseEnterYourName.Text!
+    
+    let grossIncome = pleaseEnterYourGrossIncome.Text!
+    
     // runs as soon as the view becomes visible
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    }
+    
 }
 
+
+
 //MARK: Methods
-let name = a
-let grossIncome = 10_000
+
 
 switch grossIncome{
 case 0...47_630:
