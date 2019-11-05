@@ -28,17 +28,26 @@ class ViewController: UIViewController {
         //MARK: Methods
         switch grossIncome {
         case 0...47_630:
-            print("name, your tax owing is grossIncome*0.15")
+            var taxOwing = grossIncome*0.15
+            print("name, your tax owing is taxOwing")
         case 47_631...95_259:
-            print("name, your tax owing is grossIncome*0.205")
+            var taxOwing = (grossIncome-47_630)*0.205+47_630*0.15
+            print("name, your tax owing is $taxOwing")
         case 95_260...147_667:
-            print("name, your tax owing is grossIncome*0.26")
-        case 147_668...270_371:
-            print("name, your tax owing is grossIncome*0.29")
+            var taxOwing = (grossIncome-95_260)*0.26+47_630*(0.205+0.15)
+            print("name, your tax owing is $taxOwing)")
+        case 147_668...270_370:
+            var taxOwing = (grossIncome-147_668)*0.29+52_408*0.26+47_630*(0.205+0.15)
+            print("name, your tax owing is $taxOwing")
         default:
-            print("name, your tax owing is grossIncome*0.33")
+            var taxOwing = (grossIncome-270_371)*0.33+122_703*0.29+52_408*0.26+47_630*(0.205+0.15)
+            print("name, your tax owing is $taxOwing")
         }
+      let effectiveTaxRate = taxOwing/grossIncome*100
+        print("Effective tax rate is: effectiveTaxRate% ")
     }
+    
+    
     
 }
 
